@@ -1,7 +1,9 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-const userRouter = require('./routes/userRoytes');
+const userRouter = require('./routes/userRoutes');
+const userInfoRouter = require('./routes/userInfoRoutes');
+
 const url ="mongodb+srv://admin:Long140320@travel-words.pxcnrxs.mongodb.net/dbUserManager?retryWrites=true&w=majority"; 
 const app = express();
 app.use(express.json);
