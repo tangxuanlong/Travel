@@ -7,5 +7,5 @@ const app = express();
 app.use(express.json);
 
 mongoose.connect(url,{useUnifiedTopology: true, useNewUrlParser: true});
-app.listen(3000, () => {console.log('server is running..');
+app.listen(3000, () => {console.log('Kết nối thành công');
 })
