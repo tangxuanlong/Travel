@@ -1,10 +1,11 @@
 const express = require('express');
+const router =express.Router();
 const userModel = require('../models/user');
 const app = express();
 
 app.get('/', (req, res)=> {
     res.send('We are one home')
-})
+});
 //get data
 app.get('/user', async(req, res) => {
     try {
