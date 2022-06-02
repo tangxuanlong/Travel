@@ -9,9 +9,10 @@ app.get('/', (req, res)=> {
 //get data
 app.get('/user', async(req, res) => {
     try {
-        const us = await app.find();
+        const us = await userModel.find();
         res.json(us);
     }catch(err){
+        console.error(err)
         res.json({message:err});
     }
 });

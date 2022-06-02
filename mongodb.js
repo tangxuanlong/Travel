@@ -7,13 +7,11 @@ const bodyParser = require('body-parser');
 
     //Import Routes
 const userRouter = require('./routes/userRoutes');
-//const userInfoRouter = require('./routes/userInfoRoutes');
+const userInfoRouter = require('./routes/userInfoRoutes');
 
 const url ="mongodb+srv://admin:Long140320@travel-words.pxcnrxs.mongodb.net/dbUserManager?retryWrites=true&w=majority"; 
 
 mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
-app.get('/', (req, res)=> {
-    res.send('We are on home')
-});
+app.use(userRouter);
 app.listen(3000, () => {console.log('Kết nối thành công');
 })

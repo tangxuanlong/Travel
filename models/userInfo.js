@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const {ObjectId} = require("mongodb");
+
 const UserInfoSchema = new mongoose.Schema({
     uuid: {
         type: ObjectId

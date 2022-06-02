@@ -3,11 +3,10 @@ const userInfoModel = require('../models/userInfo');
 const app = express();
 
 //add data
-app.post('/userInfo', async(req, res) => {
-        const u = new userModel(req.body);
+app.get('/userInfo', async(req, res) => {
+        const u = new userInfoModel.find();
         try {
-            await u.save();
-            res.send(u);
+            res.json(u)
         } catch (error) {
             res.status(500).send(error);
         }
