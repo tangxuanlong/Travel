@@ -16,6 +16,19 @@ app.get('/user', async(req, res) => {
         res.json({message:err});
     }
 });
+
+app.get('/user/new', async(req, res) => {
+    try {
+        const kitty = new userModel({ fullName: 'John Doe' });
+        await kitty.save()
+        res.json({
+            success:true
+        });
+    }catch(err){
+        console.error(err)
+        res.json({message:err});
+    }
+});
 //add data
 app.post('/user', async(req, res) => {
         const u = new userModel(req.body);
