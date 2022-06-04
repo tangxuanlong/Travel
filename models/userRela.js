@@ -1,11 +1,12 @@
+const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
 const UserRelaSchema = new mongoose.Schema({
     follower: {
-        type: String
+        type: ObjectId
     },
     following: {
-        type: String
+        type: ObjectId
     },
     
 

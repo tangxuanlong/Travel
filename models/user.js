@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
     phone: {
         type: String
     },
-    avatarUrl: {
+    avatarID: {
         type: String
     },
     interestedUser: {

@@ -2,7 +2,7 @@ const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
 const PostSchema = new mongoose.Schema({
-    UserId: {
+    uUId: {
         type: ObjectId
     },
     content: {
@@ -14,7 +14,10 @@ const PostSchema = new mongoose.Schema({
     likeCount: {
         type: Number
     },
-    sharePostId: {
+    sharePostId: {  // chưa rõ xử lý kiểu j
+        type: ObjectId
+    },
+    imageId: {
         type: ObjectId
     }
 

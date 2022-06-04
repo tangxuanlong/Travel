@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {ObjectId} = require("mongodb");
 
 const UserInfoSchema = new mongoose.Schema({
-    uuid: {
+    uUID: {
         type: ObjectId
     },
     fullName: {
@@ -20,7 +20,7 @@ const UserInfoSchema = new mongoose.Schema({
     phone: {
         type: String
     },
-    dateOfJoin: {
+    createAt: {
         type: Date
     },
     address: {

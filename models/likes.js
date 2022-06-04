@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const LikeSchema = new mongoose.Schema({
-    userId: {
+    uUId: {
         type: ObjectId
     },
     postId: {
